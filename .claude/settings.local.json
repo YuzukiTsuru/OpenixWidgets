@@ -3,7 +3,10 @@
     "allow": [
       "Bash(cd . && npm install 2>&1 | tail -5)",
       "Bash(npx tsc:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
