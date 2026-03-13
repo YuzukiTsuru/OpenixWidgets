@@ -41,6 +41,13 @@ This skill helps you work with demo components in OpenixWidgets.
 - Demonstrates PageContainer component
 - Shows basic usage and props table
 
+### TauriDemo
+- Location: `src/demos/TauriDemo.tsx`
+- Demonstrates calling Rust backend functions from React
+- Shows different types of Tauri commands (string, numeric, async)
+- Includes error handling examples
+- Uses PageContainer
+
 ## Demo Styles
 
 ### demos.css

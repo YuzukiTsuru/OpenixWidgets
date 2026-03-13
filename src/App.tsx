@@ -4,6 +4,7 @@ import { LayoutDemo } from './demos/LayoutDemo';
 import { PopupDemo } from './demos/PopupDemo';
 import { ThemeDemo } from './demos/ThemeDemo';
 import { ThreeColumnDemo } from './demos/ThreeColumnDemo';
+import { TauriDemo } from './demos/TauriDemo';
 import { Layout, PageContainer } from './CoreUI';
 import { Settings, loadUISettings, saveUISettings, UISettings } from './Settings';
 import {
@@ -13,6 +14,7 @@ import {
   faCube,
   faColumns,
   faThLarge,
+  faCode,
 } from '@fortawesome/free-solid-svg-icons';
 import type { ToolItem } from './CoreUI';
 import './Themes/themes.css';
@@ -50,6 +52,12 @@ const DEMO_TOOLS: ToolItem[] = [
     name: 'PageContainer',
     icon: faHome,
     description: 'PageContainer component demo',
+  },
+  {
+    id: 'tauri',
+    name: 'Tauri Backend',
+    icon: faCode,
+    description: 'Call Rust backend functions from React',
   },
 ];
 
@@ -204,6 +212,8 @@ const AppContent: React.FC = () => {
         return <ThemeDemo />;
       case 'page-container':
         return <PageContainerDemo />;
+      case 'tauri':
+        return <TauriDemo />;
       default:
         return <OverviewDemo />;
     }
