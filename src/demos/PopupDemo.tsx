@@ -4,10 +4,31 @@ import { usePopup } from '../Hooks';
 import type { PopupType } from '../CoreUI';
 
 const POPUP_TYPES: { type: PopupType; label: string; title: string; message: string }[] = [
-  { type: 'success', label: 'Success', title: 'Operation Successful', message: 'Your operation has been completed successfully! Data saved to local storage.' },
-  { type: 'error', label: 'Error', title: 'Operation Failed', message: 'An error occurred. Please check your configuration and try again. Error code: ERR_001' },
-  { type: 'warning', label: 'Warning', title: 'Warning', message: 'This operation will modify system configuration. Please confirm to continue.' },
-  { type: 'info', label: 'Info', title: 'Information', message: 'Current version is v0.1.0. Visit the official repository for updates.' },
+  {
+    type: 'success',
+    label: 'Success',
+    title: 'Operation Successful',
+    message: 'Your operation has been completed successfully! Data saved to local storage.',
+  },
+  {
+    type: 'error',
+    label: 'Error',
+    title: 'Operation Failed',
+    message:
+      'An error occurred. Please check your configuration and try again. Error code: ERR_001',
+  },
+  {
+    type: 'warning',
+    label: 'Warning',
+    title: 'Warning',
+    message: 'This operation will modify system configuration. Please confirm to continue.',
+  },
+  {
+    type: 'info',
+    label: 'Info',
+    title: 'Information',
+    message: 'Current version is v0.1.0. Visit the official repository for updates.',
+  },
 ];
 
 export const PopupDemo: React.FC = () => {
@@ -22,10 +43,11 @@ export const PopupDemo: React.FC = () => {
       description="Demonstration of Popup component and usePopup Hook usage"
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-
         <div className="demo-card">
           <h3>usePopup Hook Demo</h3>
-          <p>Use the <code>usePopup</code> hook to manage popup state. Supports 4 types.</p>
+          <p>
+            Use the <code>usePopup</code> hook to manage popup state. Supports 4 types.
+          </p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '12px' }}>
             {POPUP_TYPES.map(({ type, label, title, message }) => (
               <button
@@ -41,9 +63,19 @@ export const PopupDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>Auto Dismiss (duration)</h3>
-          <p>Set the <code>duration</code> prop to automatically close the popup after specified milliseconds.</p>
+          <p>
+            Set the <code>duration</code> prop to automatically close the popup after specified
+            milliseconds.
+          </p>
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '12px' }}>
-            <label style={{ display: 'flex', gap: '8px', alignItems: 'center', color: 'var(--color-text)' }}>
+            <label
+              style={{
+                display: 'flex',
+                gap: '8px',
+                alignItems: 'center',
+                color: 'var(--color-text)',
+              }}
+            >
               <input
                 type="checkbox"
                 checked={autoDismiss}
@@ -53,7 +85,15 @@ export const PopupDemo: React.FC = () => {
             </label>
             <button
               className="demo-btn demo-btn-primary"
-              onClick={() => showPopup('success', 'Auto Dismiss', autoDismiss ? 'This popup will close automatically in 3 seconds.' : 'This popup requires manual closing.')}
+              onClick={() =>
+                showPopup(
+                  'success',
+                  'Auto Dismiss',
+                  autoDismiss
+                    ? 'This popup will close automatically in 3 seconds.'
+                    : 'This popup requires manual closing.'
+                )
+              }
             >
               Show Popup
             </button>
@@ -62,13 +102,19 @@ export const PopupDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>Direct Popup Control</h3>
-          <p>You can also control the <code>Popup</code> component directly with props, without using the hook.</p>
+          <p>
+            You can also control the <code>Popup</code> component directly with props, without using
+            the hook.
+          </p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '12px' }}>
             {(['info', 'success', 'warning', 'error'] as PopupType[]).map((type) => (
               <button
                 key={type}
                 className={`demo-btn demo-btn-${type}`}
-                onClick={() => { setManualType(type); setManualVisible(true); }}
+                onClick={() => {
+                  setManualType(type);
+                  setManualVisible(true);
+                }}
               >
                 {type}
               </button>
@@ -78,8 +124,7 @@ export const PopupDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>API Reference</h3>
-          <pre className="demo-code">{
-`// usePopup Hook
+          <pre className="demo-code">{`// usePopup Hook
 const { popup, showPopup, hidePopup } = usePopup();
 showPopup('success', 'Title', 'Message content');
 
@@ -91,8 +136,7 @@ showPopup('success', 'Title', 'Message content');
   message="Message content"
   duration={3000}       // Auto-dismiss milliseconds (optional)
   onClose={() => {}}    // Close callback
-/>`
-          }</pre>
+/>`}</pre>
         </div>
       </div>
 

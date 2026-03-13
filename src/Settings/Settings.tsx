@@ -23,7 +23,9 @@ export function loadUISettings(): UISettings {
   try {
     const raw = localStorage.getItem('openix-widgets-settings');
     if (raw) return JSON.parse(raw) as UISettings;
-  } catch {}
+  } catch {
+    // Ignore parse errors
+  }
   return {
     language: 'zh-CN',
     themeMode: 'light',
@@ -45,7 +47,8 @@ interface SettingsProps {
 
 export const Settings: React.FC<SettingsProps> = ({ visible, onClose, onSettingsChange }) => {
   const { t, i18n } = useTranslation();
-  const { setThemeMode, setThemeId, availableThemes, currentThemeId, effectiveVariant } = useTheme();
+  const { setThemeMode, setThemeId, availableThemes, currentThemeId, effectiveVariant } =
+    useTheme();
   const [settings, setSettings] = useState<UISettings>(loadUISettings);
   const [themeViewerVisible, setThemeViewerVisible] = useState(false);
 
@@ -111,9 +114,14 @@ export const Settings: React.FC<SettingsProps> = ({ visible, onClose, onSettings
             <h3>{t('settings.uiSettings')}</h3>
             <label className="settings-item">
               <span className="settings-label">{t('settings.language')}</span>
-              <select value={settings.language} onChange={(e) => handleLanguageChange(e.target.value)}>
+              <select
+                value={settings.language}
+                onChange={(e) => handleLanguageChange(e.target.value)}
+              >
                 {supportedLanguages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>{lang.nativeName}</option>
+                  <option key={lang.code} value={lang.code}>
+                    {lang.nativeName}
+                  </option>
                 ))}
               </select>
             </label>
@@ -124,7 +132,9 @@ export const Settings: React.FC<SettingsProps> = ({ visible, onClose, onSettings
                 onChange={(e) => handleThemeModeChange(e.target.value as ThemeMode)}
               >
                 {THEME_MODE_OPTIONS.map((option) => (
-                  <option key={option.value} value={option.value}>{t(option.labelKey)}</option>
+                  <option key={option.value} value={option.value}>
+                    {t(option.labelKey)}
+                  </option>
                 ))}
               </select>
             </label>
@@ -132,7 +142,9 @@ export const Settings: React.FC<SettingsProps> = ({ visible, onClose, onSettings
               <span className="settings-label">{t('settings.themeStyle')}</span>
               <select value={validThemeId} onChange={(e) => handleThemeIdChange(e.target.value)}>
                 {filteredThemes.map((theme) => (
-                  <option key={theme.id} value={theme.id}>{theme.name} - {theme.variantName}</option>
+                  <option key={theme.id} value={theme.id}>
+                    {theme.name} - {theme.variantName}
+                  </option>
                 ))}
               </select>
             </label>

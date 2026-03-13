@@ -33,25 +33,49 @@ const ThemeViewer: React.FC<ThemeViewerProps> = ({ visible, onClose }) => {
               <div className="preview-section">
                 <h5>{t('themeViewer.buttons')}</h5>
                 <div className="preview-buttons">
-                  <button className="preview-btn preview-btn-primary">{t('themeViewer.primaryButton')}</button>
-                  <button className="preview-btn preview-btn-secondary">{t('themeViewer.secondaryButton')}</button>
-                  <button className="preview-btn preview-btn-success">{t('themeViewer.success')}</button>
-                  <button className="preview-btn preview-btn-warning">{t('themeViewer.warning')}</button>
-                  <button className="preview-btn preview-btn-error">{t('themeViewer.error')}</button>
-                  <button className="preview-btn" disabled>{t('themeViewer.disabled')}</button>
+                  <button className="preview-btn preview-btn-primary">
+                    {t('themeViewer.primaryButton')}
+                  </button>
+                  <button className="preview-btn preview-btn-secondary">
+                    {t('themeViewer.secondaryButton')}
+                  </button>
+                  <button className="preview-btn preview-btn-success">
+                    {t('themeViewer.success')}
+                  </button>
+                  <button className="preview-btn preview-btn-warning">
+                    {t('themeViewer.warning')}
+                  </button>
+                  <button className="preview-btn preview-btn-error">
+                    {t('themeViewer.error')}
+                  </button>
+                  <button className="preview-btn" disabled>
+                    {t('themeViewer.disabled')}
+                  </button>
                 </div>
               </div>
               <div className="preview-section">
                 <h5>{t('themeViewer.inputFields')}</h5>
                 <div className="preview-inputs">
-                  <input type="text" placeholder={t('themeViewer.textInput')} className="preview-input" />
-                  <input type="email" placeholder={t('themeViewer.emailInput')} className="preview-input" />
+                  <input
+                    type="text"
+                    placeholder={t('themeViewer.textInput')}
+                    className="preview-input"
+                  />
+                  <input
+                    type="email"
+                    placeholder={t('themeViewer.emailInput')}
+                    className="preview-input"
+                  />
                   <select className="preview-select">
                     <option>{t('themeViewer.selectOption')}</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
                   </select>
-                  <textarea placeholder={t('themeViewer.textarea')} className="preview-textarea" rows={3} />
+                  <textarea
+                    placeholder={t('themeViewer.textarea')}
+                    className="preview-textarea"
+                    rows={3}
+                  />
                 </div>
               </div>
               <div className="preview-section">
@@ -59,19 +83,27 @@ const ThemeViewer: React.FC<ThemeViewerProps> = ({ visible, onClose }) => {
                 <div className="preview-progress-container">
                   <div className="preview-progress-label">
                     <span>{t('themeViewer.progress25')}</span>
-                    <div className="preview-progress"><div className="preview-progress-bar" style={{ width: '25%' }} /></div>
+                    <div className="preview-progress">
+                      <div className="preview-progress-bar" style={{ width: '25%' }} />
+                    </div>
                   </div>
-                <div className="preview-progress-label">
+                  <div className="preview-progress-label">
                     <span>{t('themeViewer.progress50')}</span>
-                    <div className="preview-progress"><div className="preview-progress-bar" style={{ width: '50%' }} /></div>
+                    <div className="preview-progress">
+                      <div className="preview-progress-bar" style={{ width: '50%' }} />
+                    </div>
                   </div>
                   <div className="preview-progress-label">
                     <span>{t('themeViewer.progress75')}</span>
-                    <div className="preview-progress"><div className="preview-progress-bar" style={{ width: '75%' }} /></div>
+                    <div className="preview-progress">
+                      <div className="preview-progress-bar" style={{ width: '75%' }} />
+                    </div>
                   </div>
                   <div className="preview-progress-label">
                     <span>{t('themeViewer.progress100')}</span>
-                    <div className="preview-progress"><div className="preview-progress-bar" style={{ width: '100%' }} /></div>
+                    <div className="preview-progress">
+                      <div className="preview-progress-bar" style={{ width: '100%' }} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,14 +114,18 @@ const ThemeViewer: React.FC<ThemeViewerProps> = ({ visible, onClose }) => {
                     <div className="preview-card-header">{t('themeViewer.cardTitle')}</div>
                     <div className="preview-card-body">{t('themeViewer.cardBody')}</div>
                     <div className="preview-card-footer">
-                      <button className="preview-btn preview-btn-primary">{t('themeViewer.cardAction')}</button>
+                      <button className="preview-btn preview-btn-primary">
+                        {t('themeViewer.cardAction')}
+                      </button>
                     </div>
                   </div>
                   <div className="preview-card preview-card-accent">
                     <div className="preview-card-header">{t('themeViewer.accentCardTitle')}</div>
                     <div className="preview-card-body">{t('themeViewer.accentCardBody')}</div>
                     <div className="preview-card-footer">
-                      <button className="preview-btn preview-btn-secondary">{t('themeViewer.cardAction')}</button>
+                      <button className="preview-btn preview-btn-secondary">
+                        {t('themeViewer.cardAction')}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -97,10 +133,18 @@ const ThemeViewer: React.FC<ThemeViewerProps> = ({ visible, onClose }) => {
               <div className="preview-section">
                 <h5>{t('themeViewer.alerts')}</h5>
                 <div className="preview-alerts">
-                  <div className="preview-alert preview-alert-info">{t('themeViewer.infoAlert')}</div>
-                  <div className="preview-alert preview-alert-success">{t('themeViewer.successAlert')}</div>
-                  <div className="preview-alert preview-alert-warning">{t('themeViewer.warningAlert')}</div>
-                  <div className="preview-alert preview-alert-error">{t('themeViewer.errorAlert')}</div>
+                  <div className="preview-alert preview-alert-info">
+                    {t('themeViewer.infoAlert')}
+                  </div>
+                  <div className="preview-alert preview-alert-success">
+                    {t('themeViewer.successAlert')}
+                  </div>
+                  <div className="preview-alert preview-alert-warning">
+                    {t('themeViewer.warningAlert')}
+                  </div>
+                  <div className="preview-alert preview-alert-error">
+                    {t('themeViewer.errorAlert')}
+                  </div>
                 </div>
               </div>
               <div className="preview-section">
@@ -110,20 +154,36 @@ const ThemeViewer: React.FC<ThemeViewerProps> = ({ visible, onClose }) => {
                   <h2>{t('themeViewer.heading2')}</h2>
                   <h3>{t('themeViewer.heading3')}</h3>
                   <p>{t('themeViewer.paragraph')}</p>
-                  <p><small>{t('themeViewer.smallText')}</small></p>
-                  <p><strong>{t('themeViewer.boldText')}</strong></p>
-                  <p><em>{t('themeViewer.italicText')}</em></p>
+                  <p>
+                    <small>{t('themeViewer.smallText')}</small>
+                  </p>
+                  <p>
+                    <strong>{t('themeViewer.boldText')}</strong>
+                  </p>
+                  <p>
+                    <em>{t('themeViewer.italicText')}</em>
+                  </p>
                   <a href="#">{t('themeViewer.linkText')}</a>
                 </div>
               </div>
               <div className="preview-section">
                 <h5>{t('themeViewer.badges')}</h5>
                 <div className="preview-badges">
-                  <span className="preview-badge preview-badge-primary">{t('themeViewer.primaryBadge')}</span>
-                  <span className="preview-badge preview-badge-secondary">{t('themeViewer.secondaryBadge')}</span>
-                  <span className="preview-badge preview-badge-success">{t('themeViewer.successBadge')}</span>
-                  <span className="preview-badge preview-badge-warning">{t('themeViewer.warningBadge')}</span>
-                  <span className="preview-badge preview-badge-error">{t('themeViewer.errorBadge')}</span>
+                  <span className="preview-badge preview-badge-primary">
+                    {t('themeViewer.primaryBadge')}
+                  </span>
+                  <span className="preview-badge preview-badge-secondary">
+                    {t('themeViewer.secondaryBadge')}
+                  </span>
+                  <span className="preview-badge preview-badge-success">
+                    {t('themeViewer.successBadge')}
+                  </span>
+                  <span className="preview-badge preview-badge-warning">
+                    {t('themeViewer.warningBadge')}
+                  </span>
+                  <span className="preview-badge preview-badge-error">
+                    {t('themeViewer.errorBadge')}
+                  </span>
                 </div>
               </div>
               <div className="preview-section">

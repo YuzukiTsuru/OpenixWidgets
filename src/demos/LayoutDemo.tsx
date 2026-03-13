@@ -10,10 +10,17 @@ export const LayoutDemo: React.FC = () => {
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div className="demo-card">
           <h3>Component Overview</h3>
-          <p>The entire application interface you see is the actual effect of <code>Layout</code> and <code>Sidebar</code> components:</p>
+          <p>
+            The entire application interface you see is the actual effect of <code>Layout</code> and{' '}
+            <code>Sidebar</code> components:
+          </p>
           <ul style={{ lineHeight: 2, color: 'var(--color-text)' }}>
-            <li>Collapsible sidebar on the left (click the &lt; / &gt; button at the top to toggle)</li>
-            <li>Sidebar tool items with highlight display (current selected item is highlighted)</li>
+            <li>
+              Collapsible sidebar on the left (click the &lt; / &gt; button at the top to toggle)
+            </li>
+            <li>
+              Sidebar tool items with highlight display (current selected item is highlighted)
+            </li>
             <li>Settings button in the bottom right corner (click to open settings panel)</li>
             <li>Supports locked state to disable toggling</li>
           </ul>
@@ -21,8 +28,7 @@ export const LayoutDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>Basic Usage</h3>
-          <pre className="demo-code">{
-`import { Layout } from './CoreUI';
+          <pre className="demo-code">{`import { Layout } from './CoreUI';
 import type { ToolItem } from './CoreUI';
 
 const tools: ToolItem[] = [
@@ -42,8 +48,7 @@ const tools: ToolItem[] = [
   version="1.0.0"
 >
   <YourContent />
-</Layout>`
-          }</pre>
+</Layout>`}</pre>
         </div>
 
         <div className="demo-card">
@@ -51,9 +56,15 @@ const tools: ToolItem[] = [
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
               <tr style={{ background: 'var(--color-surface1)' }}>
-                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>Prop</th>
-                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>Type</th>
-                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>Description</th>
+                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>
+                  Prop
+                </th>
+                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>
+                  Type
+                </th>
+                <th style={{ padding: '10px 16px', textAlign: 'left', color: 'var(--color-text)' }}>
+                  Description
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -70,8 +81,24 @@ const tools: ToolItem[] = [
                 ['children', 'ReactNode', 'Main content area'],
               ].map(([prop, type, desc]) => (
                 <tr key={prop} style={{ borderBottom: '1px solid var(--color-border)' }}>
-                  <td style={{ padding: '10px 16px', color: 'var(--color-accent)', fontFamily: 'monospace' }}>{prop}</td>
-                  <td style={{ padding: '10px 16px', color: 'var(--color-success)', fontFamily: 'monospace' }}>{type}</td>
+                  <td
+                    style={{
+                      padding: '10px 16px',
+                      color: 'var(--color-accent)',
+                      fontFamily: 'monospace',
+                    }}
+                  >
+                    {prop}
+                  </td>
+                  <td
+                    style={{
+                      padding: '10px 16px',
+                      color: 'var(--color-success)',
+                      fontFamily: 'monospace',
+                    }}
+                  >
+                    {type}
+                  </td>
                   <td style={{ padding: '10px 16px', color: 'var(--color-subtext1)' }}>{desc}</td>
                 </tr>
               ))}
@@ -81,14 +108,12 @@ const tools: ToolItem[] = [
 
         <div className="demo-card">
           <h3>ToolItem Type</h3>
-          <pre className="demo-code">{
-`interface ToolItem {
+          <pre className="demo-code">{`interface ToolItem {
   id: string;              // Unique identifier
   name: string;            // Display name
   icon: IconDefinition;    // FontAwesome icon
   description: string;     // Description text
-}`
-          }</pre>
+}`}</pre>
         </div>
       </div>
     </PageContainer>

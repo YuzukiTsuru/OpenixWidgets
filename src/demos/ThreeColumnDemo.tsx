@@ -48,9 +48,7 @@ export const ThreeColumnDemo: React.FC = () => {
         <div className="efex-section">
           <div className="section-header">Item Selection</div>
           <div className="section-body">
-            <button className="efex-btn efex-btn-primary efex-btn-block">
-              Refresh List
-            </button>
+            <button className="efex-btn efex-btn-primary efex-btn-block">Refresh List</button>
             <div className="efex-device-list">
               {items.map((item) => (
                 <div
@@ -133,10 +131,7 @@ export const ThreeColumnDemo: React.FC = () => {
                 </button>
               </div>
             </div>
-            <button
-              className="efex-btn efex-btn-warning efex-btn-block"
-              disabled={!selectedItem}
-            >
+            <button className="efex-btn efex-btn-warning efex-btn-block" disabled={!selectedItem}>
               Upload File
             </button>
           </div>
@@ -185,7 +180,10 @@ export const ThreeColumnDemo: React.FC = () => {
                   <span className="hex-addr">{addr}</span>
                   <span className="hex-bytes">
                     {Array.from({ length: 16 }, () =>
-                      Math.floor(Math.random() * 256).toString(16).padStart(2, '0').toUpperCase()
+                      Math.floor(Math.random() * 256)
+                        .toString(16)
+                        .padStart(2, '0')
+                        .toUpperCase()
                     ).join(' ')}
                   </span>
                   <span className="hex-ascii">
@@ -194,14 +192,15 @@ export const ThreeColumnDemo: React.FC = () => {
                     ).join('')}
                   </span>
                   <span className="hex-disasm">
-                    {['ADD', 'SUB', 'MOV', 'JMP', 'CMP'][Math.floor(Math.random() * 5)]} R{Math.floor(Math.random() * 8)}, #{Math.floor(Math.random() * 256)}
+                    {['ADD', 'SUB', 'MOV', 'JMP', 'CMP'][Math.floor(Math.random() * 5)]} R
+                    {Math.floor(Math.random() * 8)}, #{Math.floor(Math.random() * 256)}
                   </span>
                 </div>
               ))}
             </div>
           ) : (
             <div className="efex-empty-hex">
-              No data available. Click "Load Data" to display content.
+              No data available. Click &quot;Load Data&quot; to display content.
             </div>
           )}
         </div>

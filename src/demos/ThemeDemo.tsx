@@ -3,16 +3,26 @@ import { useTheme } from '../Themes';
 import { PageContainer } from '../CoreUI';
 
 export const ThemeDemo: React.FC = () => {
-  const { availableThemes, currentThemeId, effectiveVariant, themeMode, setThemeMode, setThemeId, currentColors } = useTheme();
+  const {
+    availableThemes,
+    currentThemeId,
+    effectiveVariant,
+    themeMode,
+    setThemeMode,
+    setThemeId,
+    currentColors,
+  } = useTheme();
 
   const darkThemes = availableThemes.filter((t) => t.variant === 'dark');
   const lightThemes = availableThemes.filter((t) => t.variant === 'light');
   const currentThemes = effectiveVariant === 'dark' ? darkThemes : lightThemes;
 
   return (
-    <PageContainer title="Theme System" description="Theme system demo: Switch themes and modes in real-time">
+    <PageContainer
+      title="Theme System"
+      description="Theme system demo: Switch themes and modes in real-time"
+    >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-
         <div className="demo-card">
           <h3>Theme Mode</h3>
           <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
@@ -49,18 +59,47 @@ export const ThemeDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>Current Theme Palette</h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px', marginTop: '12px' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+              gap: '10px',
+              marginTop: '12px',
+            }}
+          >
             {Object.entries(currentColors).map(([key, value]) => (
-              <div key={key} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
-                <div style={{
-                  width: '100%',
-                  height: '40px',
-                  borderRadius: '6px',
-                  background: value,
-                  border: '1px solid var(--color-border)',
-                }} />
-                <span style={{ fontSize: '11px', color: 'var(--color-subtext1)', textAlign: 'center' }}>{key}</span>
-                <span style={{ fontSize: '10px', color: 'var(--color-overlay0)', fontFamily: 'monospace' }}>{value}</span>
+              <div
+                key={key}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    height: '40px',
+                    borderRadius: '6px',
+                    background: value,
+                    border: '1px solid var(--color-border)',
+                  }}
+                />
+                <span
+                  style={{ fontSize: '11px', color: 'var(--color-subtext1)', textAlign: 'center' }}
+                >
+                  {key}
+                </span>
+                <span
+                  style={{
+                    fontSize: '10px',
+                    color: 'var(--color-overlay0)',
+                    fontFamily: 'monospace',
+                  }}
+                >
+                  {value}
+                </span>
               </div>
             ))}
           </div>
@@ -68,8 +107,7 @@ export const ThemeDemo: React.FC = () => {
 
         <div className="demo-card">
           <h3>CSS Variables Usage</h3>
-          <pre className="demo-code">{
-`/* Use theme variables in CSS */
+          <pre className="demo-code">{`/* Use theme variables in CSS */
 .my-component {
   background: var(--color-base);
   color: var(--color-text);
@@ -82,8 +120,7 @@ export const ThemeDemo: React.FC = () => {
 .error-text  { color: var(--color-error); }
 
 /* Use useTheme in React */
-const { currentColors, isDark, setThemeMode, setThemeId } = useTheme();`
-          }</pre>
+const { currentColors, isDark, setThemeMode, setThemeId } = useTheme();`}</pre>
         </div>
       </div>
     </PageContainer>
