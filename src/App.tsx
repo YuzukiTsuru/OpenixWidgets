@@ -49,7 +49,7 @@ const DEMO_TOOLS: ToolItem[] = [
   },
   {
     id: 'page-container',
-    name: 'PageContainer',
+    name: 'Page Container',
     icon: faHome,
     description: 'PageContainer component demo',
   },
