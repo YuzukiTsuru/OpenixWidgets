@@ -1,0 +1,60 @@
+{
+  "id": "yuzuki",
+  "name": "Yuzuki",
+  "variants": {
+    "OwO": {
+      "type": "Light",
+      "config": {
+        "base": "#ffffff",
+        "mantle": "#fff5f8",
+        "crust": "#ffe8ef",
+        "surface0": "#fff0f5",
+        "surface1": "#ffd8e6",
+        "surface2": "#ffc0d9",
+        "overlay0": "#f0a0c0",
+        "overlay1": "#e080a8",
+        "overlay2": "#d06090",
+        "text": "#4a2040",
+        "subtext0": "#6b4060",
+        "subtext1": "#8c6080",
+        "accent": "#ff6b9d",
+        "accentHover": "#ff5a8d",
+        "accentText": "#ffffff",
+        "success": "#ff85a8",
+        "warning": "#ffb7c5",
+        "error": "#ff6b8a",
+        "border": "#ffc0d9",
+        "interactive": "#fff0f5",
+        "interactiveHover": "#ffd8e6",
+        "interactiveActive": "#ffc0d9"
+      }
+    },
+    "QwQ": {
+      "type": "Light",
+      "config": {
+        "base": "#ffffff",
+        "mantle": "#f0f8ff",
+        "crust": "#e6f2ff",
+        "surface0": "#f5f9ff",
+        "surface1": "#e0efff",
+        "surface2": "#c2dfff",
+        "overlay0": "#9cb8e8",
+        "overlay1": "#7a9fd8",
+        "overlay2": "#5886c8",
+        "text": "#1a365d",
+        "subtext0": "#2c5282",
+        "subtext1": "#4a6fa5",
+        "accent": "#3b82f6",
+        "accentHover": "#2563eb",
+        "accentText": "#ffffff",
+        "success": "#06b6d4",
+        "warning": "#f59e0b",
+        "error": "#ef4444",
+        "border": "#c2dfff",
+        "interactive": "#f5f9ff",
+        "interactiveHover": "#e0efff",
+        "interactiveActive": "#c2dfff"
+      }
+    }
+  }
+}

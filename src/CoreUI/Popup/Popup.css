@@ -1,0 +1,120 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-modal-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup {
+  background: var(--color-base);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px var(--color-shadow-md);
+  min-width: 320px;
+  max-width: 480px;
+  animation: slideIn 0.15s ease-out;
+  border: 1px solid var(--color-surface0);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-surface0);
+  gap: 12px;
+}
+
+.popup-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.popup-success .popup-icon {
+  background: var(--color-success);
+  color: var(--color-base);
+}
+
+.popup-error .popup-icon {
+  background: var(--color-error);
+  color: var(--color-base);
+}
+
+.popup-warning .popup-icon {
+  background: var(--color-warning);
+  color: var(--color-base);
+}
+
+.popup-info .popup-icon {
+  background: var(--color-accent);
+  color: var(--color-base);
+}
+
+.popup-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.popup-close {
+  background: transparent;
+  border: none;
+  color: var(--color-overlay0);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.popup-close:hover {
+  background: var(--color-surface0);
+  color: var(--color-text);
+}
+
+.popup-message {
+  padding: 16px 20px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+}

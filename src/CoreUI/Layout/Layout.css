@@ -1,0 +1,32 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--color-base);
+}
+
+.layout-main {
+  flex: 1;
+  overflow: auto;
+  background-color: var(--color-base);
+  position: relative;
+}
+
+.tool-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tool-panel.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}

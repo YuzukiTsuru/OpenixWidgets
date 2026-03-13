@@ -1,0 +1,60 @@
+{
+  "id": "github",
+  "name": "GitHub Theme",
+  "variants": {
+    "Dark": {
+      "type": "Dark",
+      "config": {
+        "base": "#0d1117",
+        "mantle": "#010409",
+        "crust": "#000000",
+        "surface0": "#161b22",
+        "surface1": "#21262d",
+        "surface2": "#30363d",
+        "overlay0": "#484f58",
+        "overlay1": "#6e7681",
+        "overlay2": "#8b949e",
+        "text": "#e6edf3",
+        "subtext0": "#c9d1d9",
+        "subtext1": "#8b949e",
+        "accent": "#58a6ff",
+        "accentHover": "#4c8ed9",
+        "accentText": "#0d1117",
+        "success": "#3fb950",
+        "warning": "#d29922",
+        "error": "#f85149",
+        "border": "#30363d",
+        "interactive": "#161b22",
+        "interactiveHover": "#21262d",
+        "interactiveActive": "#30363d"
+      }
+    },
+    "Light": {
+      "type": "Light",
+      "config": {
+        "base": "#ffffff",
+        "mantle": "#f6f8fa",
+        "crust": "#eaeef2",
+        "surface0": "#f6f8fa",
+        "surface1": "#eaeef2",
+        "surface2": "#d0d7de",
+        "overlay0": "#8c959f",
+        "overlay1": "#6e7781",
+        "overlay2": "#57606a",
+        "text": "#24292f",
+        "subtext0": "#57606a",
+        "subtext1": "#6e7781",
+        "accent": "#0969da",
+        "accentHover": "#0550ae",
+        "accentText": "#ffffff",
+        "success": "#1a7f37",
+        "warning": "#9a6700",
+        "error": "#cf222e",
+        "border": "#d0d7de",
+        "interactive": "#f6f8fa",
+        "interactiveHover": "#eaeef2",
+        "interactiveActive": "#d0d7de"
+      }
+    }
+  }
+}

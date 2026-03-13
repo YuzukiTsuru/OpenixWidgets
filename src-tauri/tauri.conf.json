@@ -5,16 +5,21 @@
   "identifier": "com.yuzukitsuru.openix-widgets",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:1420",
+    "devUrl": "http://localhost:1421",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
   "app": {
     "windows": [
       {
-        "title": "openix-widgets",
-        "width": 800,
-        "height": 600
+        "title": "OpenixWidgets",
+        "width": 1280,
+        "height": 880,
+        "minWidth": 1090,
+        "minHeight": 880,
+        "center": true,
+        "resizable": true,
+        "decorations": true
       }
     ],
     "security": {

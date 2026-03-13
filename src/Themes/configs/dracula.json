@@ -1,0 +1,60 @@
+{
+  "id": "dracula",
+  "name": "Dracula",
+  "variants": {
+    "Dark": {
+      "type": "Dark",
+      "config": {
+        "base": "#282a36",
+        "mantle": "#21222c",
+        "crust": "#191a21",
+        "surface0": "#44475a",
+        "surface1": "#4d5166",
+        "surface2": "#5a5e75",
+        "overlay0": "#6272a4",
+        "overlay1": "#7281bf",
+        "overlay2": "#8b9dc3",
+        "text": "#f8f8f2",
+        "subtext0": "#e6e6e6",
+        "subtext1": "#bfbfbf",
+        "accent": "#bd93f9",
+        "accentHover": "#b088f0",
+        "accentText": "#282a36",
+        "success": "#50fa7b",
+        "warning": "#ffb86c",
+        "error": "#ff5555",
+        "border": "#44475a",
+        "interactive": "#44475a",
+        "interactiveHover": "#4d5166",
+        "interactiveActive": "#5a5e75"
+      }
+    },
+    "Light": {
+      "type": "Light",
+      "config": {
+        "base": "#f8f8f2",
+        "mantle": "#f0f0eb",
+        "crust": "#e8e8e3",
+        "surface0": "#e6e6e0",
+        "surface1": "#d8d8d2",
+        "surface2": "#c8c8c2",
+        "overlay0": "#9a9a94",
+        "overlay1": "#7a7a74",
+        "overlay2": "#5a5a54",
+        "text": "#282a36",
+        "subtext0": "#44475a",
+        "subtext1": "#6272a4",
+        "accent": "#8555c7",
+        "accentHover": "#7a4eb8",
+        "accentText": "#ffffff",
+        "success": "#3da25a",
+        "warning": "#d4882a",
+        "error": "#d44040",
+        "border": "#d8d8d2",
+        "interactive": "#e6e6e0",
+        "interactiveHover": "#d8d8d2",
+        "interactiveActive": "#c8c8c2"
+      }
+    }
+  }
+}

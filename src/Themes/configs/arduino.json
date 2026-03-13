@@ -1,0 +1,60 @@
+{
+  "id": "arduino",
+  "name": "Arduino",
+  "variants": {
+    "Dark": {
+      "type": "Dark",
+      "config": {
+        "base": "#1e1e1e",
+        "mantle": "#181818",
+        "crust": "#121212",
+        "surface0": "#252526",
+        "surface1": "#2d2d2d",
+        "surface2": "#3a3a3a",
+        "overlay0": "#6a6a6a",
+        "overlay1": "#8a8a8a",
+        "overlay2": "#aaaaaa",
+        "text": "#d4d4d4",
+        "subtext0": "#b0b0b0",
+        "subtext1": "#909090",
+        "accent": "#00979d",
+        "accentHover": "#00b4b4",
+        "accentText": "#ffffff",
+        "success": "#4ec9b0",
+        "warning": "#dcdcaa",
+        "error": "#f14c4c",
+        "border": "#3a3a3a",
+        "interactive": "#2d2d2d",
+        "interactiveHover": "#3a3a3a",
+        "interactiveActive": "#4a4a4a"
+      }
+    },
+    "Light": {
+      "type": "Light",
+      "config": {
+        "base": "#ffffff",
+        "mantle": "#f3f3f3",
+        "crust": "#e8e8e8",
+        "surface0": "#f3f3f3",
+        "surface1": "#ececec",
+        "surface2": "#e0e0e0",
+        "overlay0": "#6a6a6a",
+        "overlay1": "#5a5a5a",
+        "overlay2": "#4a4a4a",
+        "text": "#1e1e1e",
+        "subtext0": "#3a3a3a",
+        "subtext1": "#5a5a5a",
+        "accent": "#00979d",
+        "accentHover": "#007a80",
+        "accentText": "#ffffff",
+        "success": "#4ec9b0",
+        "warning": "#dcdcaa",
+        "error": "#f14c4c",
+        "border": "#e0e0e0",
+        "interactive": "#f3f3f3",
+        "interactiveHover": "#ececec",
+        "interactiveActive": "#e0e0e0"
+      }
+    }
+  }
+}

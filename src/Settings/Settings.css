@@ -1,0 +1,254 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-modal-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.settings-panel {
+  background-color: var(--color-base);
+  border-radius: 12px;
+  width: 480px;
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px var(--color-shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.settings-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-overlay0);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.settings-close:hover {
+  background-color: var(--color-surface0);
+  color: var(--color-text);
+}
+
+.settings-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.settings-section {
+  margin-bottom: 24px;
+}
+
+.settings-section:last-child {
+  margin-bottom: 0;
+}
+
+.settings-section h3 {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-label {
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.settings-item input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.settings-item input[type='number'] {
+  width: 100px;
+  padding: 8px 12px;
+  background-color: var(--color-surface0);
+  border: 1px solid var(--color-surface1);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.settings-item input[type='number']:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.settings-item select {
+  padding: 8px 12px;
+  background-color: var(--color-surface0);
+  border: 1px solid var(--color-surface1);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-width: 150px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23cdd6f4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px;
+}
+
+.settings-item select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.settings-item select option {
+  background-color: var(--color-base);
+  color: var(--color-text);
+}
+
+.settings-item select option:hover,
+.settings-item select option:focus,
+.settings-item select option:active,
+.settings-item select option:checked {
+  background-color: var(--color-surface0);
+  color: var(--color-accent);
+}
+
+.settings-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.settings-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.settings-btn-primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  color: var(--color-accent-text);
+}
+
+.settings-btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-accent-hover) 0%, var(--color-accent) 100%);
+}
+
+.settings-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.settings-btn-secondary {
+  background-color: var(--color-surface0);
+  color: var(--color-text);
+}
+
+.settings-btn-secondary:hover {
+  background-color: var(--color-surface1);
+}
+
+.settings-update-item {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.settings-update-info {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: var(--color-surface0);
+  border-radius: 8px;
+}
+
+.settings-update-available {
+  color: var(--color-success);
+  margin-bottom: 12px;
+}
+
+.settings-update-latest {
+  color: var(--color-accent);
+}
+
+.settings-update-btn {
+  width: 100%;
+}
+
+.settings-update-progress {
+  margin-bottom: 12px;
+}
+
+.settings-progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-surface1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.settings-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.settings-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-subtext1);
+}

@@ -1,0 +1,60 @@
+{
+  "id": "atom-one",
+  "name": "Atom One",
+  "variants": {
+    "Dark": {
+      "type": "Dark",
+      "config": {
+        "base": "#282c34",
+        "mantle": "#21252b",
+        "crust": "#1a1d23",
+        "surface0": "#3e4451",
+        "surface1": "#4b5263",
+        "surface2": "#5c6370",
+        "overlay0": "#5c6370",
+        "overlay1": "#7f848e",
+        "overlay2": "#9da5b4",
+        "text": "#abb2bf",
+        "subtext0": "#9da5b4",
+        "subtext1": "#7f848e",
+        "accent": "#61afef",
+        "accentHover": "#4fa3e5",
+        "accentText": "#282c34",
+        "success": "#98c379",
+        "warning": "#e5c07b",
+        "error": "#e06c75",
+        "border": "#3e4451",
+        "interactive": "#3e4451",
+        "interactiveHover": "#4b5263",
+        "interactiveActive": "#5c6370"
+      }
+    },
+    "Light": {
+      "type": "Light",
+      "config": {
+        "base": "#fafafa",
+        "mantle": "#f5f5f5",
+        "crust": "#f0f0f0",
+        "surface0": "#f5f5f5",
+        "surface1": "#e5e5e5",
+        "surface2": "#d4d4d4",
+        "overlay0": "#a0a0a0",
+        "overlay1": "#808080",
+        "overlay2": "#606060",
+        "text": "#383a42",
+        "subtext0": "#505050",
+        "subtext1": "#707070",
+        "accent": "#4078f2",
+        "accentHover": "#3868e0",
+        "accentText": "#ffffff",
+        "success": "#50a14f",
+        "warning": "#c18401",
+        "error": "#e45649",
+        "border": "#e5e5e5",
+        "interactive": "#f5f5f5",
+        "interactiveHover": "#e5e5e5",
+        "interactiveActive": "#d4d4d4"
+      }
+    }
+  }
+}
