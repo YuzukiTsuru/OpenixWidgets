@@ -41,19 +41,19 @@ export const ThreeColumnDemo: React.FC = () => {
   };
 
   return (
-    <div className="efex-gui">
+    <div className="tc-gui">
       {/* Left Sidebar - Control Panel */}
-      <div className="efex-sidebar">
+      <div className="tc-sidebar">
         {/* Item Selection Section */}
-        <div className="efex-section">
+        <div className="tc-section">
           <div className="section-header">Item Selection</div>
           <div className="section-body">
-            <button className="efex-btn efex-btn-primary efex-btn-block">Refresh List</button>
-            <div className="efex-device-list">
+            <button className="tc-btn tc-btn-primary tc-btn-block">Refresh List</button>
+            <div className="tc-device-list">
               {items.map((item) => (
                 <div
                   key={item}
-                  className={`efex-device-item ${selectedItem === item ? 'selected' : ''}`}
+                  className={`tc-device-item ${selectedItem === item ? 'selected' : ''}`}
                   onClick={() => {
                     setSelectedItem(item);
                     addLog('info', `Selected: ${item}`);
@@ -71,10 +71,10 @@ export const ThreeColumnDemo: React.FC = () => {
         </div>
 
         {/* Data Configuration Section */}
-        <div className="efex-section">
+        <div className="tc-section">
           <div className="section-header">Data Configuration</div>
           <div className="section-body">
-            <div className="efex-form-group">
+            <div className="tc-form-group">
               <label>Input Field</label>
               <input
                 type="text"
@@ -83,7 +83,7 @@ export const ThreeColumnDemo: React.FC = () => {
                 placeholder="Enter value..."
               />
             </div>
-            <div className="efex-form-group">
+            <div className="tc-form-group">
               <label>Range Value</label>
               <input
                 type="text"
@@ -92,16 +92,16 @@ export const ThreeColumnDemo: React.FC = () => {
                 placeholder="0-1000"
               />
             </div>
-            <div className="efex-btn-row">
+            <div className="tc-btn-row">
               <button
-                className="efex-btn efex-btn-primary efex-btn-flex-3"
+                className="tc-btn tc-btn-primary tc-btn-flex-3"
                 onClick={handleLoadData}
                 disabled={!selectedItem}
               >
                 Load Data
               </button>
               <button
-                className="efex-btn efex-btn-primary efex-btn-flex-1"
+                className="tc-btn tc-btn-primary tc-btn-flex-1"
                 disabled={dataContent.length === 0}
               >
                 Export
@@ -111,42 +111,42 @@ export const ThreeColumnDemo: React.FC = () => {
         </div>
 
         {/* File Operations Section */}
-        <div className="efex-section">
+        <div className="tc-section">
           <div className="section-header">File Operations</div>
           <div className="section-body">
-            <div className="efex-form-group">
+            <div className="tc-form-group">
               <label>Category</label>
-              <select className="efex-select" disabled={!selectedItem}>
+              <select className="tc-select" disabled={!selectedItem}>
                 {categories.map((cat) => (
                   <option key={cat}>{cat}</option>
                 ))}
               </select>
             </div>
-            <div className="efex-form-group">
+            <div className="tc-form-group">
               <label>File Path</label>
-              <div className="efex-file-row">
+              <div className="tc-file-row">
                 <input type="text" placeholder="Select file..." disabled={!selectedItem} />
-                <button className="efex-btn efex-btn-small" disabled={!selectedItem}>
+                <button className="tc-btn tc-btn-small" disabled={!selectedItem}>
                   Browse
                 </button>
               </div>
             </div>
-            <button className="efex-btn efex-btn-warning efex-btn-block" disabled={!selectedItem}>
+            <button className="tc-btn tc-btn-warning tc-btn-block" disabled={!selectedItem}>
               Upload File
             </button>
           </div>
         </div>
 
         {/* Actions Section */}
-        <div className="efex-section">
+        <div className="tc-section">
           <div className="section-header">Quick Actions</div>
           <div className="section-body">
-            <div className="efex-form-group">
+            <div className="tc-form-group">
               <label>Action Parameter</label>
               <input type="text" placeholder="Optional parameter" disabled={!selectedItem} />
             </div>
             <button
-              className="efex-btn efex-btn-warning efex-btn-block"
+              className="tc-btn tc-btn-warning tc-btn-block"
               disabled={!selectedItem}
               onClick={() => addLog('warn', 'Action executed')}
             >
@@ -157,15 +157,15 @@ export const ThreeColumnDemo: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="efex-main">
+      <div className="tc-main">
         {/* Data Viewer */}
-        <div className="efex-hex-container">
+        <div className="tc-hex-container">
           <div className="section-header">
             <div className="hex-header">
               <span>Data Viewer</span>
               <div className="hex-header-controls">
                 <span className="hex-header-label">Format:</span>
-                <select className="efex-select efex-select-inline">
+                <select className="tc-select tc-select-inline">
                   <option>Hexadecimal</option>
                   <option>Decimal</option>
                   <option>Binary</option>
@@ -199,18 +199,18 @@ export const ThreeColumnDemo: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="efex-empty-hex">
+            <div className="tc-empty-hex">
               No data available. Click &quot;Load Data&quot; to display content.
             </div>
           )}
         </div>
 
         {/* Log Panel */}
-        <div className="efex-log-container">
+        <div className="tc-log-container">
           <div className="section-header">Activity Log</div>
-          <div className="efex-log">
+          <div className="tc-log">
             {logs.map((log, i) => (
-              <div key={i} className={`efex-log-entry log-${log.level}`}>
+              <div key={i} className={`tc-log-entry log-${log.level}`}>
                 <span className="log-time">{log.time}</span>
                 <span className="log-level">[{log.level.toUpperCase()}]</span>
                 <span className="log-msg">{log.message}</span>
