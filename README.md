@@ -2,6 +2,8 @@
 
 A modern UI component framework built with React, TypeScript, and Tauri. OpenixWidgets provides a complete theming system, internationalization support, and reusable UI components for building beautiful desktop applications.
 
+<img width="1282" height="930" alt="image" src="https://github.com/user-attachments/assets/2b2f0caf-f164-4499-aed6-74fc9e53680d" />
+
 ## Features
 
 - **🎨 Comprehensive Theming System** - 7 built-in themes with light/dark variants
