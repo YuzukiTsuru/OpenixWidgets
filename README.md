@@ -165,8 +165,7 @@ All components use CSS variables for styling. Available color variables:
 The framework uses i18next for internationalization. Language is auto-detected from the browser with fallback to zh-CN.
 
 Supported languages:
-- 🇨🇳 Chinese (Simplified) - zh-CN
-- 🇹🇼 Chinese (Traditional) - zh-TW
+- 🇨🇳 Chinese (Simplified) - zh-CN/Chinese (Traditional) - zh-TW
 - 🇺🇸 English - en-US
 - 🇯🇵 Japanese - ja-JP
 - 🇰🇷 Korean - ko-KR
